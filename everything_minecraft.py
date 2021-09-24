@@ -1,50 +1,76 @@
 def area():
-    print("lets calculate some numbers")
-    select()
+    print("Welcome to the area math calculator")
+    print("first tell me how many blocks by how many blocks horizontally?")
+    width = int(input("1st horizontal direction: "))
+    length = int(input("2nd horizontal direction: "))
+    height = int(input("Now how many blocks high is your building? "))
+    floors = int(input("How many floors? "))
+    doors = int(input("How many doors? "))
+    windows = int(input("How many windows? "))
+    windowWidth = int(input("How wide are those windows? "))
+    windowHeight = int(input("How high are those windows? "))
+    widthWalls = (width - 1) * 2
+    lengthWalls = (length - 1) * 2
+    doorSize = doors * 2
+    windowSize = windowWidth * windowHeight * windows
+    floorArea = (width - 2) * (length - 2)
+
+
+    print("The amount of blocks you'll need for the external walls are: ")
+    print(((widthWalls + lengthWalls) * height) - doorSize - windowSize)
+    print("The amount of blocks you'll need for the floors are: ")
+    print(floorArea * floors)
+    print("The amount of blocks you'll likely need for the roof are: ")
+    print((width + 2) * (length + 2))
+
+    menu()
 
 def build():
     print("lets compare some building blocks!")
-    select()
+    menu()
 
 def details():
     print("lets get some information about items and blocks!!")
-    select()
+    menu()
 
 def mobs():
     print("lets get some information about mobs!!!")
-    select()
+    menu()
 
 def progress():
     print("what can you do when?  Welcome to Minecraft progression.")
-    select()
+    menu()
 
 def timeline():
     print("this is the story of Minecraft's development and what got added when.")
-    select()
+    menu()
 
 def quit():
     print("bye bye")
 
+def error():
+    print("Sorry I didn't recognise that input.")
+    print("Please choose again")
+    menu()
+
 def select():
-    choice = input("What function do you want to use?")
+    choice = input("What function do you want to use? ")
     if choice == "A":
         area()
-    if choice == "B":
+    elif choice == "B":
         build()
-    if choice == "D":
+    elif choice == "D":
         details()
-    if choice == "M":
+    elif choice == "M":
         mobs()
-    if choice == "P":
+    elif choice == "P":
         progress()
-    if choice == "T":
+    elif choice == "T":
         timeline()
-    if choice == "Q":
+    elif choice == "Q":
         quit()
     else:
-        print("Sorry I didn't recognise that input.")
-        print("Please choose again")
-        menu()
+        error()
 
 
 def menu():
