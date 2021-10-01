@@ -1,3 +1,89 @@
+class Building_material:
+    def _init_(self, name, use, hue, brightness, wood):
+        self.name = name
+        self.use = use
+        self.hue = hue
+        self.brightness = brightness
+        self.type = wood
+
+cobblestone = Building_material("cobblestone", "WR", "greyscale", "mid", False)
+oak = Building_material("oak", "WFR", "yellow", "mid", True)
+stone_bricks = Building_material("stone bricks", "W", "greyscale", "mid", False)
+sandstone = Building_material("sandstone", "F", "yellow", "light", False)
+birch = Building_material("birch", "WF", "yellow", "light", True)
+spruce = Building_material("spruce", "WFR", "orange", "mid-dark", True)
+jungle = Building_material("jungle wood", "WF", "orange", "mid", True)
+dark_oak = Building_material("dark oak", "WFR", "orange", "dark", True)
+acacia = Building_material("acacia", "W", "orange", "mid", True)
+smooth_sandstone = Building_material("smooth sandstone", "W", "yellow", "light", False)
+cut_sandstone = Building_material("cut sandstone", "W", "yellow", "light", False)
+bricks = Building_material("bricks", "W", "orange", "mid", False)
+andesite = Building_material("andesite", "F", "greyscale", "mid-light", False)
+diorite = Building_material("diorite", "F", "greyscale", "light", False)
+granite = Building_material("granite", "F", "orange", "mid", False)
+nether_bricks = Building_material("nether bricks", "W", "red", "dark", False)
+red_nether_bricks = Building_material("red nether bricks", "W", "red", "mid-dark", False)
+warped_wood = Building_material("warped wood", "WF", "cyan", "mid", True)
+crimson_wood = Building_material("crimson planks", "WFR", "magenta", "mid", True)
+blackstone = Building_material("blackstone", "WFR", "greyscale", "dark", False)
+deepslate = Building_material("deepslate", "WFR", "greyscale", "mid-dark", False)
+copper = Building_material("copper", "WFR", "orange", "mid", False)
+prismarine = Building_material("prismarine", "W", "cyan", "mid-light", False)
+prismarine_bricks = Building_material("prismarine bricks", "W", "cyan", "mid", False)
+dark_prismarine = Building_material("dark prismarine", "FR", "green", "dark", False)
+endstone_bricks = Building_material("endstone bricks", "W", "yellow", "light", False)
+purpur = Building_material("purpur", "WFR", "purple", "mid-light", False)
+quartz = Building_material("quartz", "WF", "greyscale", "light", False)
+white_concrete = Building_material("white concrete", "W", "greyscale", "light", False)
+light_grey_concrete = Building_material("light grey concrete", "W", "greyscale", "mid-light", False)
+grey_concrete = Building_material("grey concrete", "W", "greyscale", "mid-dark", False)
+black_concrete = Building_material("black concrete", "W", "greyscale", "dark", False)
+pink_concrete = Building_material("pink concrete", "W", "red", "light", False)
+red_concrete = Building_material("red concrete", "W", "red", "mid", False)
+orange_concrete = Building_material("orange concrete", "W", "orange", "mid-light", False)
+brown_concrete = Building_material("brown concrete", "W", "orange", "mid-dark", False)
+yellow_concrete = Building_material("yellow concrete", "W", "yellow", "light", False)
+lime_concrete = Building_material("lime concrete", "W", "green", "light", False)
+green_concrete = Building_material("green concrete", "W", "green", "mid-dark", False)
+cyan_concrete = Building_material("cyan concrete", "W", "cyan", "mid-dark", False)
+light_blue_concrete = Building_material("light blue concrete", "W", "blue", "light", False)
+blue_concrete = Building_material("blue concrete", "W", "blue", "mid", False)
+magenta_concrete = Building_material("magenta concrete", "W", "magenta", "mid-light", False)
+purple_concrete = Building_material("purple concrete", "W", "purple", "dark", False)
+white_wool = Building_material("white wool", "F", "greyscale", "light", False)
+light_grey_wool = Building_material("light grey wool", "F", "greyscale", "mid-light", False)
+grey_wool = Building_material("grey wool", "F", "greyscale", "mid-dark", False)
+black_wool = Building_material("black wool", "F", "greyscale", "dark", False)
+pink_wool = Building_material("pink wool", "F", "red", "light", False)
+red_wool = Building_material("red wool", "F", "red", "mid-light", False)
+orange_wool = Building_material("orange wool", "F", "orange", "mid-light", False)
+brown_wool = Building_material("brown wool", "F", "orange", "mid-dark", False)
+yellow_wool = Building_material("yellow wool", "F", "yellow", "light", False)
+lime_wool = Building_material("lime wool", "F", "green", "light", False)
+green_wool = Building_material("green wool", "F", "green", "mid", False)
+cyan_wool = Building_material("cyan wool", "F", "cyan", "mid-dark", False)
+light_blue_wool = Building_material("light blue wool", "F", "blue", "light", False)
+blue_wool = Building_material("blue wool", "F", "blue", "mid", False)
+magenta_wool = Building_material("magenta wool", "F", "magenta", "light", False)
+purple_wool = Building_material("purple wool", "F", "purple", "mid-dark", False)
+
+
+#function for choosing what to do after finishing with an app
+def continue_choice(origin_screen):
+    choice = input("Do you want to continue with this (A), return to the main menu (B) or quit(C)?")
+    if choice == "B":
+        menu()
+    elif choice == "C":
+        quit()
+    elif choice == "A":
+        if origin_screen == "A":
+            area()
+    else:
+        print("Sorry I didn't understand that.")
+        continue_choice(origin_screen)
+
+
+#the area math app
 def area():
     print("Welcome to the area math calculator")
     print("first tell me how many blocks by how many blocks horizontally?")
@@ -23,36 +109,45 @@ def area():
     print("The amount of blocks you'll likely need for the roof are: ")
     print((width + 2) * (length + 2))
 
-    menu()
+    continue_choice("A")
 
+    
+#compare building blocks app
 def build():
     print("lets compare some building blocks!")
     menu()
 
+#details about blocks and items
 def details():
     print("lets get some information about items and blocks!!")
     menu()
 
+#details about mobs
 def mobs():
     print("lets get some information about mobs!!!")
     menu()
 
+#minecraft progression
 def progress():
     print("what can you do when?  Welcome to Minecraft progression.")
     menu()
 
+#timeline of minecraft development
 def timeline():
     print("this is the story of Minecraft's development and what got added when.")
     menu()
 
+#quit function
 def quit():
     print("bye bye")
 
+#error function for unrecognised menu input
 def error():
     print("Sorry I didn't recognise that input.")
     print("Please choose again")
     menu()
 
+#select menu options
 def select():
     choice = input("What function do you want to use? ")
     if choice == "A":
@@ -73,6 +168,7 @@ def select():
         error()
 
 
+#the menu text, explaining the different apps
 def menu():
     print("You can do the following:")
     print("calculate amount of materials for a build (type 'A' for Area Math)")
@@ -84,6 +180,7 @@ def menu():
     print("Or of course you could quit (Q)")
     select()
 
+#introductory message
 print("Welcome to Everything Minecraft")
 menu()
 
