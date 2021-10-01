@@ -1,10 +1,10 @@
 class Building_material:
-    def _init_(self, name, use, hue, brightness, wood):
+    def __init__(self, name, use, hue, brightness, wood):
         self.name = name
         self.use = use
         self.hue = hue
         self.brightness = brightness
-        self.type = wood
+        self.wood = wood
 
 cobblestone = Building_material("cobblestone", "WR", "greyscale", "mid", False)
 oak = Building_material("oak", "WFR", "yellow", "mid", True)
@@ -67,6 +67,7 @@ blue_wool = Building_material("blue wool", "F", "blue", "mid", False)
 magenta_wool = Building_material("magenta wool", "F", "magenta", "light", False)
 purple_wool = Building_material("purple wool", "F", "purple", "mid-dark", False)
 
+building_blocks = [cobblestone, stone_bricks, sandstone, blackstone, oak, spruce, birch, dark_oak, acacia, nether_bricks, red_nether_bricks, prismarine, prismarine_bricks, dark_prismarine, warped_wood, crimson_wood, quartz, deepslate, copper, cut_sandstone, smooth_sandstone, purpur, endstone_bricks, white_concrete, white_wool, light_blue_concrete, light_blue_wool, light_grey_concrete, light_grey_wool, green_concrete, green_wool, grey_concrete, grey_wool, granite, andesite, diorite, black_concrete, black_wool, pink_concrete, pink_wool, red_wool, red_concrete, orange_concrete, orange_wool, yellow_concrete, yellow_wool, lime_concrete, lime_wool, cyan_concrete, cyan_wool, blue_concrete, blue_wool, magenta_concrete, magenta_wool, purple_concrete, purple_wool, bricks]
 
 #function for choosing what to do after finishing with an app
 def continue_choice(origin_screen):
@@ -78,6 +79,8 @@ def continue_choice(origin_screen):
     elif choice == "A":
         if origin_screen == "A":
             area()
+        elif origin_screen == "B":
+            build()
     else:
         print("Sorry I didn't understand that.")
         continue_choice(origin_screen)
@@ -111,11 +114,55 @@ def area():
 
     continue_choice("A")
 
+def search(block):
+    selection = ""
+    for i in building_blocks:
+        if block == i.name:
+            selection = i
+    return selection
+
+def where(block):
+    WFR = ""
+    if block.use == "W":
+        WFR = "walls."
+    elif block.use == "F":
+        if block.wood == True:
+            WFR = "floors (especially stripped wood)."
+        else: WFR = "floors."
+    elif block.use == "R":
+        WFR = "roofs (slabs and stairs)."
+    elif block.use == "WF":
+        if block.wood == True:
+            WFR = "walls and floors (especially stripped wood)"
+        else:
+            WFR = "walls and floors."
+    elif block.use == "WR":
+        WFR = "walls and roofs (slabs and stairs)."
+    elif block.use == "FR":
+        if block.wood == True:
+            WFR = "floors (especially stripped wood) and roofs (slabs and stairs)."
+        else:
+            WFR = "floors and roofs (slabs and stairs)."
+    elif block.use == "WFR":
+        if block.wood == True:
+            WFR = "walls, floors (especially stripped wood) and roofs (slabs and stairs)."
+        else:
+            WFR = "walls, floors and roofs (slabs and stairs)."
+    else:
+        print("Error.  Data missing or unrecognised.")
+    print("Useful for " + WFR)
+
+
+def compare(block):
+    chosen_block = search(block)
+    print(chosen_block.name)
+    where(chosen_block)
     
 #compare building blocks app
 def build():
-    print("lets compare some building blocks!")
-    menu()
+    block = input("Pick a building block in Minecraft: ")
+    compare(block)
+    continue_choice("B")
 
 #details about blocks and items
 def details():
