@@ -71,12 +71,12 @@ building_blocks = [cobblestone, stone_bricks, sandstone, blackstone, oak, spruce
 
 #function for choosing what to do after finishing with an app
 def continue_choice(origin_screen):
-    choice = input("Do you want to continue with this (A), return to the main menu (B) or quit(C)?")
-    if choice == "B":
+    decision = input("Do you want to continue with this (A), return to the main menu (B) or quit(C)?")
+    if decision == "B":
         menu()
-    elif choice == "C":
+    elif decision == "C":
         quit()
-    elif choice == "A":
+    elif decision == "A":
         if origin_screen == "A":
             area()
         elif origin_screen == "B":
@@ -155,8 +155,12 @@ def where(block):
 
 def compare(block):
     chosen_block = search(block)
-    print(chosen_block.name)
-    where(chosen_block)
+    if chosen_block == "":
+        print("Sorry but that block is unrecognised.  It either doesn't exist, hasn't been added to this app, or was entered incorrectly.  Please pick another block.")
+        build()
+    else:
+        print(chosen_block.name)
+        where(chosen_block)
     
 #compare building blocks app
 def build():
