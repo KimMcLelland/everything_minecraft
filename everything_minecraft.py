@@ -6,66 +6,66 @@ class Building_material:
         self.brightness = brightness
         self.wood = wood
 
-cobblestone = Building_material("cobblestone", "WR", "greyscale", "mid", False)
-oak = Building_material("oak", "WFR", "yellow", "mid", True)
-stone_bricks = Building_material("stone bricks", "W", "greyscale", "mid", False)
-sandstone = Building_material("sandstone", "F", "yellow", "light", False)
-birch = Building_material("birch", "WF", "yellow", "light", True)
-spruce = Building_material("spruce", "WFR", "orange", "mid-dark", True)
-jungle = Building_material("jungle wood", "WF", "orange", "mid", True)
-dark_oak = Building_material("dark oak", "WFR", "orange", "dark", True)
-acacia = Building_material("acacia", "W", "orange", "mid", True)
-smooth_sandstone = Building_material("smooth sandstone", "W", "yellow", "light", False)
-cut_sandstone = Building_material("cut sandstone", "W", "yellow", "light", False)
-bricks = Building_material("bricks", "W", "orange", "mid", False)
-andesite = Building_material("andesite", "F", "greyscale", "mid-light", False)
-diorite = Building_material("diorite", "F", "greyscale", "light", False)
-granite = Building_material("granite", "F", "orange", "mid", False)
-nether_bricks = Building_material("nether bricks", "W", "red", "dark", False)
-red_nether_bricks = Building_material("red nether bricks", "W", "red", "mid-dark", False)
-warped_wood = Building_material("warped wood", "WF", "cyan", "mid", True)
-crimson_wood = Building_material("crimson planks", "WFR", "magenta", "mid", True)
-blackstone = Building_material("blackstone", "WFR", "greyscale", "dark", False)
-deepslate = Building_material("deepslate", "WFR", "greyscale", "mid-dark", False)
-copper = Building_material("copper", "WFR", "orange", "mid", False)
-prismarine = Building_material("prismarine", "W", "cyan", "mid-light", False)
-prismarine_bricks = Building_material("prismarine bricks", "W", "cyan", "mid", False)
-dark_prismarine = Building_material("dark prismarine", "FR", "green", "dark", False)
-endstone_bricks = Building_material("endstone bricks", "W", "yellow", "light", False)
-purpur = Building_material("purpur", "WFR", "purple", "mid-light", False)
-quartz = Building_material("quartz", "WF", "greyscale", "light", False)
-white_concrete = Building_material("white concrete", "W", "greyscale", "light", False)
-light_grey_concrete = Building_material("light grey concrete", "W", "greyscale", "mid-light", False)
-grey_concrete = Building_material("grey concrete", "W", "greyscale", "mid-dark", False)
-black_concrete = Building_material("black concrete", "W", "greyscale", "dark", False)
-pink_concrete = Building_material("pink concrete", "W", "red", "light", False)
-red_concrete = Building_material("red concrete", "W", "red", "mid", False)
-orange_concrete = Building_material("orange concrete", "W", "orange", "mid-light", False)
-brown_concrete = Building_material("brown concrete", "W", "orange", "mid-dark", False)
-yellow_concrete = Building_material("yellow concrete", "W", "yellow", "light", False)
-lime_concrete = Building_material("lime concrete", "W", "green", "light", False)
-green_concrete = Building_material("green concrete", "W", "green", "mid-dark", False)
-cyan_concrete = Building_material("cyan concrete", "W", "cyan", "mid-dark", False)
-light_blue_concrete = Building_material("light blue concrete", "W", "blue", "light", False)
-blue_concrete = Building_material("blue concrete", "W", "blue", "mid", False)
-magenta_concrete = Building_material("magenta concrete", "W", "magenta", "mid-light", False)
-purple_concrete = Building_material("purple concrete", "W", "purple", "dark", False)
-white_wool = Building_material("white wool", "F", "greyscale", "light", False)
-light_grey_wool = Building_material("light grey wool", "F", "greyscale", "mid-light", False)
-grey_wool = Building_material("grey wool", "F", "greyscale", "mid-dark", False)
-black_wool = Building_material("black wool", "F", "greyscale", "dark", False)
-pink_wool = Building_material("pink wool", "F", "red", "light", False)
-red_wool = Building_material("red wool", "F", "red", "mid-light", False)
-orange_wool = Building_material("orange wool", "F", "orange", "mid-light", False)
-brown_wool = Building_material("brown wool", "F", "orange", "mid-dark", False)
-yellow_wool = Building_material("yellow wool", "F", "yellow", "light", False)
-lime_wool = Building_material("lime wool", "F", "green", "light", False)
-green_wool = Building_material("green wool", "F", "green", "mid", False)
-cyan_wool = Building_material("cyan wool", "F", "cyan", "mid-dark", False)
-light_blue_wool = Building_material("light blue wool", "F", "blue", "light", False)
-blue_wool = Building_material("blue wool", "F", "blue", "mid", False)
-magenta_wool = Building_material("magenta wool", "F", "magenta", "light", False)
-purple_wool = Building_material("purple wool", "F", "purple", "mid-dark", False)
+cobblestone = Building_material("cobblestone", "WR", 0, 3, False)
+oak = Building_material("oak", "WFR", 3, 3, True)
+stone_bricks = Building_material("stone bricks", "W", 0, 3, False)
+sandstone = Building_material("sandstone", "F", 3, 5, False)
+birch = Building_material("birch", "WF", 3, 5, True)
+spruce = Building_material("spruce", "WFR", 2, 2, True)
+jungle = Building_material("jungle wood", "WF", 2, 3, True)
+dark_oak = Building_material("dark oak", "WFR", 2, 1, True)
+acacia = Building_material("acacia", "W", 2, 3, True)
+smooth_sandstone = Building_material("smooth sandstone", "W", 3, 5, False)
+cut_sandstone = Building_material("cut sandstone", "W", 3, 5, False)
+bricks = Building_material("bricks", "W", 2, 3, False)
+andesite = Building_material("andesite", "F", 0, 4, False)
+diorite = Building_material("diorite", "F", 0, 5, False)
+granite = Building_material("granite", "F", 2, 3, False)
+nether_bricks = Building_material("nether bricks", "W", 1, 1, False)
+red_nether_bricks = Building_material("red nether bricks", "W", 1, 2, False)
+warped_wood = Building_material("warped wood", "WF", 5, 3, True)
+crimson_wood = Building_material("crimson planks", "WFR", 8, 3, True)
+blackstone = Building_material("blackstone", "WFR", 0, 1, False)
+deepslate = Building_material("deepslate", "WFR", 0, 2, False)
+copper = Building_material("copper", "WFR", 2, 3, False)
+prismarine = Building_material("prismarine", "W", 5, 4, False)
+prismarine_bricks = Building_material("prismarine bricks", "W", 5, 3, False)
+dark_prismarine = Building_material("dark prismarine", "FR", 4, 1, False)
+endstone_bricks = Building_material("endstone bricks", "W", 3, 5, False)
+purpur = Building_material("purpur", "WFR", 7, 4, False)
+quartz = Building_material("quartz", "WF", 0, 5, False)
+white_concrete = Building_material("white concrete", "W", 0, 5, False)
+light_grey_concrete = Building_material("light grey concrete", "W", 0, 4, False)
+grey_concrete = Building_material("grey concrete", "W", 0, 2, False)
+black_concrete = Building_material("black concrete", "W", 0, 1, False)
+pink_concrete = Building_material("pink concrete", "W", 1, 5, False)
+red_concrete = Building_material("red concrete", "W", 1, 3, False)
+orange_concrete = Building_material("orange concrete", "W", 2, 4, False)
+brown_concrete = Building_material("brown concrete", "W", 2, 2, False)
+yellow_concrete = Building_material("yellow concrete", "W", 3, 5, False)
+lime_concrete = Building_material("lime concrete", "W", 4, 5, False)
+green_concrete = Building_material("green concrete", "W", 4, 2, False)
+cyan_concrete = Building_material("cyan concrete", "W", 5, 2, False)
+light_blue_concrete = Building_material("light blue concrete", "W", 6, 5, False)
+blue_concrete = Building_material("blue concrete", "W", 6, 3, False)
+magenta_concrete = Building_material("magenta concrete", "W", 8, 4, False)
+purple_concrete = Building_material("purple concrete", "W", 7, 1, False)
+white_wool = Building_material("white wool", "F", 0, 5, False)
+light_grey_wool = Building_material("light grey wool", "F", 0, 4, False)
+grey_wool = Building_material("grey wool", "F", 0, 2, False)
+black_wool = Building_material("black wool", "F", 0, 1, False)
+pink_wool = Building_material("pink wool", "F", 1, 5, False)
+red_wool = Building_material("red wool", "F", 1, 4, False)
+orange_wool = Building_material("orange wool", "F", 2, 4, False)
+brown_wool = Building_material("brown wool", "F", 2, 2, False)
+yellow_wool = Building_material("yellow wool", "F", 3, 5, False)
+lime_wool = Building_material("lime wool", "F", 4, 5, False)
+green_wool = Building_material("green wool", "F", 4, 3, False)
+cyan_wool = Building_material("cyan wool", "F", 5, 2, False)
+light_blue_wool = Building_material("light blue wool", "F", 6, 5, False)
+blue_wool = Building_material("blue wool", "F", 6, 3, False)
+magenta_wool = Building_material("magenta wool", "F", 8, 5, False)
+purple_wool = Building_material("purple wool", "F", 7, 2, False)
 
 building_blocks = [cobblestone, stone_bricks, sandstone, blackstone, oak, spruce, birch, dark_oak, acacia, nether_bricks, red_nether_bricks, prismarine, prismarine_bricks, dark_prismarine, warped_wood, crimson_wood, quartz, deepslate, copper, cut_sandstone, smooth_sandstone, purpur, endstone_bricks, white_concrete, white_wool, light_blue_concrete, light_blue_wool, light_grey_concrete, light_grey_wool, green_concrete, green_wool, grey_concrete, grey_wool, granite, andesite, diorite, black_concrete, black_wool, pink_concrete, pink_wool, red_wool, red_concrete, orange_concrete, orange_wool, yellow_concrete, yellow_wool, lime_concrete, lime_wool, cyan_concrete, cyan_wool, blue_concrete, blue_wool, magenta_concrete, magenta_wool, purple_concrete, purple_wool, bricks]
 
@@ -121,36 +121,143 @@ def search(block):
             selection = i
     return selection
 
+def hue_test(hue1, hue2):
+    huematch = None
+    if hue1 == 0 and hue2 != 0:
+        huematch = True
+    elif hue1 != 0 and hue2 == 0:
+        huematch = True
+    elif hue1 == 0 and hue2 == 0:
+        huematch = False
+    elif hue1 == 1:
+        if hue2 > 3 and hue2 < 7:
+            huematch = True
+        else:
+            huematch = False
+    elif hue1 == 2:
+        if hue2 > 4 and hue2 < 8:
+            huematch = True
+        else:
+            huematch = False
+    elif hue1 == 3 and hue2 > 5:
+        huematch = True
+    elif hue1 == 4:
+        if hue2 > 6  or hue2 < 2:
+            huematch = True
+        else:
+            huematch = False
+    elif hue1 == 5:
+        if hue2 > 7 or hue2 < 3:
+            huematch = True
+        else:
+            huematch = False
+    elif hue1 == 6 and hue2 < 4:
+        huematch = True
+    elif hue1 == 7:
+        if hue2 > 1 and hue2 < 5:
+            huematch = True
+        else:
+            huematch = False
+    elif hue1 == 8:
+        if hue2 > 2 and hue2 < 6:
+            huematch = True
+        else:
+            huematch = False
+    else:
+        huematch = False
+    return huematch
+
+def brightness_test(brightness1, brightness2):
+    brightmatch = None
+    if brightness1 > 3 and brightness2 < 3:
+        brightmatch = True
+    elif brightness1 < 3 and brightness2 > 3:
+        brightmatch = True
+    elif brightness1 == 3 or brightness2 == 3:
+        brightmatch = True
+    else:
+        brightmatch = False
+    return brightmatch
+
+def walls(block):
+    print("\u0332".join("Walls"))
+    print("For floors and roof use:")
+    for i in building_blocks:
+        if i.use != "W":
+            hue_match = hue_test(block.hue, i.hue)
+            brightness_match = brightness_test(block.brightness, i.brightness)
+            if hue_match == True and brightness_match == True:
+                print(i.name)
+    print("")
+    
+
+def floor(block):
+    print("\u0332".join("Floor"))
+    print("For walls use:")
+    for i in building_blocks:
+        if i.use == "W" or i.use == "WF" or i.use == "WR" or i.use == "WFR":
+            hue_match = hue_test(block.hue, i.hue)
+            brightness_match = brightness_test(block.brightness, i.brightness)
+            if hue_match == True and brightness_match == True:
+                print(i.name)
+    print("")
+
+def roof(block):
+    print("\u0332".join("Roof"))
+    print("For walls use:")
+    for i in building_blocks:
+        if i.use == "W" or i.use == "WF" or i.use == "WR" or i.use == "WFR":
+            hue_match = hue_test(block.hue, i.hue)
+            brightness_match = brightness_test(block.brightness, i.brightness)
+            if hue_match == True and brightness_match == True:
+                print(i.name)
+    print("")
+    print("")
+
+
 def where(block):
     WFR = ""
     if block.use == "W":
         WFR = "walls."
+        walls(block)
     elif block.use == "F":
         if block.wood == True:
             WFR = "floors (especially stripped wood)."
         else: WFR = "floors."
+        floor(block)
     elif block.use == "R":
         WFR = "roofs (slabs and stairs)."
+        roof(block)
     elif block.use == "WF":
         if block.wood == True:
             WFR = "walls and floors (especially stripped wood)"
         else:
             WFR = "walls and floors."
+        walls(block)
+        floor(block)
     elif block.use == "WR":
         WFR = "walls and roofs (slabs and stairs)."
+        walls(block)
+        roof(block)
     elif block.use == "FR":
         if block.wood == True:
             WFR = "floors (especially stripped wood) and roofs (slabs and stairs)."
         else:
             WFR = "floors and roofs (slabs and stairs)."
+        floor(block)
+        roof(block)
     elif block.use == "WFR":
         if block.wood == True:
             WFR = "walls, floors (especially stripped wood) and roofs (slabs and stairs)."
         else:
             WFR = "walls, floors and roofs (slabs and stairs)."
+        walls(block)
+        floor(block)
+        roof(block)
     else:
         print("Error.  Data missing or unrecognised.")
     print("Useful for " + WFR)
+
 
 
 def compare(block):
